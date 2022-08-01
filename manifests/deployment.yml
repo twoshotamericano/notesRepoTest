@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "testinged-73b2"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "testinged-73b2"
+  template:
+    metadata:
+      labels:
+        app: "testinged-73b2"
+    spec:
+      containers:
+        - name: "testinged-73b2"
+          image: "testinged.azurecr.io/testinged"
+          ports:
+          - containerPort: 5000
