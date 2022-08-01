@@ -45,4 +45,9 @@ def create():
   except Exception as e:
     app.logger.error(str(e))
     return render_template("error.html",data=str(e))
+  
+  
+  
+  if __name__ == '__main__':
+	  app.run(host="0.0.0.0", debug=True)
  
